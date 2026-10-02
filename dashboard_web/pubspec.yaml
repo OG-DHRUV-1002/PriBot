@@ -1,0 +1,18 @@
+name: synthos_dashboard
+description: Project Synth-OS Web Command Center
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^4.15.0
+  firebase_auth: ^6.7.0
+  google_sign_in: ^7.2.0
+  firebase_database: ^12.6.0
+
+flutter:
+  uses-material-design: true

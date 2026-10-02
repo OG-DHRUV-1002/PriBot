@@ -1,0 +1,6 @@
+{
+  "rules": {
+    ".read": "auth != null && auth.token.email === 'admin.synthos@gmail.com'",
+    ".write": "auth != null && auth.token.email === 'admin.synthos@gmail.com'"
+  }
+}

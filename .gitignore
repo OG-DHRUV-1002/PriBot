@@ -1,0 +1,24 @@
+# Security/Secrets (CRITICAL TO AVOID LEAKING DATABASE ADMIN KEYS)
+firebase_service_account.json
+edge_ai_python/firebase_service_account.json
+
+# Flutter Web
+dashboard_web/.dart_tool/
+dashboard_web/build/
+dashboard_web/.pub-cache/
+dashboard_web/.packages
+dashboard_web/macos/Flutter/ephemeral/
+dashboard_web/ios/Pods/
+dashboard_web/windows/flutter/ephemeral/
+
+# Python Edge AI
+edge_ai_python/__pycache__/
+edge_ai_python/venv/
+*.pyc
+haarcascade_frontalface_default.xml
+
+# ESP32 Firmware
+firmware_esp32/build/
+*.bin
+*.elf
+*.map

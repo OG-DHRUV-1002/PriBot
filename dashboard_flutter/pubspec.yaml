@@ -1,0 +1,30 @@
+name: synth_os_dashboard
+description: Project Synth-OS Enterprise Command Center
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Firebase Infrastructure
+  firebase_core: ^2.24.2
+  firebase_database: ^10.4.0
+  
+  # State Management
+  flutter_riverpod: ^2.4.9
+  
+  # UI/UX Utilities
+  google_fonts: ^6.1.0
+  flutter_joystick: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true

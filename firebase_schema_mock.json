@@ -1,0 +1,21 @@
+{
+  "telemetry": {
+    "rssi": -58,
+    "battery_voltage_adc": 4.12
+  },
+  "control": {
+    "joystick": {
+      "x": 0.0,
+      "y": 0.5
+    },
+    "stance": {
+      "height": 50.0,
+      "roll": 0.0,
+      "pitch": -10.5
+    }
+  },
+  "commands": {
+    "oled_animation": "angry",
+    "voice_trigger": "dance"
+  }
+}

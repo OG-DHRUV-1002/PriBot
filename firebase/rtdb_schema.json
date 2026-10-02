@@ -1,0 +1,21 @@
+{
+  "telemetry": {
+    "rssi": -65,
+    "battery_v": 7.4,
+    "status": "ONLINE",
+    "timestamp": 1690000000000
+  },
+  "control": {
+    "wasd": {
+      "x": 0.0,
+      "y": 1.0,
+      "timestamp": 1690000000000
+    }
+  },
+  "commands": {
+    "emotes": {
+      "current_emote": 1,
+      "timestamp": 1690000000000
+    }
+  }
+}

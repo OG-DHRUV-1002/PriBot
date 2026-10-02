@@ -1,0 +1,26 @@
+{
+  "telemetry": {
+    "battery_level": 98,
+    "signal_strength": -65,
+    "status": "online",
+    "uptime_seconds": 12450,
+    "last_updated": 1696276800000
+  },
+  "control": {
+    "wasd": {
+      "w": true,
+      "a": false,
+      "s": false,
+      "d": false
+    },
+    "speed": 75,
+    "last_command_timestamp": 1696276805000
+  },
+  "commands": {
+    "emotes": {
+      "active_emote": "wave",
+      "duration_ms": 3000,
+      "trigger_timestamp": 1696276810000
+    }
+  }
+}
