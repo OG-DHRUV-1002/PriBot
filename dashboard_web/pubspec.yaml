@@ -7,12 +7,13 @@ environment:
   sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
+  app_settings: ^9.0.0
   flutter:
     sdk: flutter
-  firebase_core: ^4.15.0
-  firebase_auth: ^6.7.0
-  google_sign_in: ^7.2.0
-  firebase_database: ^12.6.0
+  flutter_animate: ^4.5.2
+  flutter_joystick: ^0.2.2
+  google_fonts: ^9.0.0
+  http: ^1.6.0
 
 flutter:
   uses-material-design: true

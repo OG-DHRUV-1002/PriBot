@@ -18,7 +18,7 @@ void SafetyWatchdog::feed() {
     if (isOffline) {
         // If we were offline and just received a packet, restore normal operation
         isOffline = false;
-        OLEDDriver::displayEmote(1); // Restore UI to Idle Emote
+        OLEDDriver::displayEmote(EmoteType::HAPPY); // Restore UI to Idle Emote
     }
 }
 

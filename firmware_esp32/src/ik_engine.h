@@ -6,28 +6,36 @@
 class IKEngine {
 public:
     IKEngine();
-    void init();
-    // Processes X, Y joystick/control vector (-1.0 to 1.0)
-    void updateLocomotion(float targetX, float targetY);
+    static void init();
+    void updateLocomotion(float targetX, float targetY, int targetEmote);
 
 private:
-    float _currentX;
-    float _currentY;
+    int _state; 
     
-    // Smoothing configuration
-    const float ALPHA = 0.15f; 
-    
-    // Kinematic constraints
-    const float L1 = 45.0f; // Thigh length (mm)
-    const float L2 = 45.0f; // Calf length (mm)
-    const float BASE_Z = 70.0f; // Base standing height
-    
-    // Gait state
-    float _phase;
-    const float GAIT_SPEED = 0.25f;
+    // Core helpers from original firmware
+    void setServoAngle(uint8_t channel, int angle);
+    bool pressingCheck(int expectedState, int ms);
 
-    // Inverse Kinematics calculator
-    void calculateIK(float x, float z, float& hipAngle, float& kneeAngle, bool isLeft);
+    // Sequential Poses
+    void runStandPose();
+    void runWalkPose();
+    void runWalkBackward();
+    void runTurnLeft();
+    void runTurnRight();
+    
+    void runWavePose();
+    void runDancePose();
+    void runSwimPose();
+    void runPointPose();
+    void runPushupPose();
+    void runBowPose();
+    void runCutePose();
+    void runFreakyPose();
+    void runWormPose();
+    void runShakePose();
+    void runShrugPose();
+    void runDeadPose();
+    void runCrabPose();
 };
 
 #endif

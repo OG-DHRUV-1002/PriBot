@@ -1,57 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'firebase_options.dart'; // Generated via flutterfire configure
-import 'screens/login_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'screens/dashboard_screen.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  runApp(const SesameDashboardApp());
+void main() {
+  runApp(const SynthOSApp());
 }
 
-class SesameDashboardApp extends StatelessWidget {
-  const SesameDashboardApp({super.key});
+class SynthOSApp extends StatelessWidget {
+  const SynthOSApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Sesame Dashboard',
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color(0xFF121212),
+      title: 'PriBot Control',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: const Color(0xFF0F0F1A), // Deep dark space blue
         colorScheme: const ColorScheme.dark(
-          primary: Colors.blueAccent,
-          secondary: Colors.cyanAccent,
+          primary: Color(0xFF00E5FF), // Neon cyan
+          secondary: Color(0xFFFF00FF), // Neon pink
+          surface: Color(0xFF1A1A2E), // Darker panel
         ),
+        fontFamily: GoogleFonts.orbitron().fontFamily,
       ),
-      home: const AuthWrapper(),
-    );
-  }
-}
-
-class AuthWrapper extends StatelessWidget {
-  const AuthWrapper({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return StreamBuilder<User?>(
-      stream: FirebaseAuth.instance.authStateChanges(),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Scaffold(
-            body: Center(child: CircularProgressIndicator()),
-          );
-        }
-        final user = snapshot.data;
-        // Strict Validation: immediate lockdown for non-matching email
-        if (user != null && user.email == 'YOUR_EMAIL@gmail.com') {
-          return const DashboardScreen();
-        }
-        return const LoginScreen();
-      },
+      home: const DashboardScreen(),
     );
   }
 }
